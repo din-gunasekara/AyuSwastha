@@ -1,0 +1,62 @@
+# ---- Build results ----
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# ---- Visual Studio / Rider ----
+.vs/
+.idea/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.sln.docstates
+*.rsuser
+
+# ---- MSBuild / restore ----
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nuget.props
+*.nuget.targets
+.nuget/
+
+# ---- .NET ----
+*.dll
+*.exe
+*.pdb
+*.cache
+*.dll.config
+*.VisualState.xml
+TestResult.xml
+
+# ---- Local database / runtime data ----
+*.db
+*.db-shm
+*.db-wal
+AyuSwastha.db*
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ---- Editor ----
+*.swp
+*.swo
+*~
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json

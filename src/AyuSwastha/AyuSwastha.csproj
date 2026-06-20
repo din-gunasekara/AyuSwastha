@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1B2C3D4-E5F6-4A7B-8C9D-000000000001}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AyuSwastha</RootNamespace>
+    <AssemblyName>AyuSwastha</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <LangVersion>latest</LangVersion>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.SQLite" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\AppExceptions.cs" />
+    <Compile Include="Core\PasswordHasher.cs" />
+    <Compile Include="Core\Theme.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\Doctor.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Models\Therapy.cs" />
+    <Compile Include="Models\TherapySession.cs" />
+    <Compile Include="Models\Prescription.cs" />
+    <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Data\Database.cs" />
+    <Compile Include="Data\Seed.cs" />
+    <Compile Include="Data\IRepository.cs" />
+    <Compile Include="Data\PatientRepository.cs" />
+    <Compile Include="Data\DoctorRepository.cs" />
+    <Compile Include="Data\AppointmentRepository.cs" />
+    <Compile Include="Services\Session.cs" />
+    <Compile Include="Services\AuthService.cs" />
+    <Compile Include="Services\DoshaRecommendationService.cs" />
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardControl.Designer.cs">
+      <DependentUpon>DashboardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Patients\PatientsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Patients\PatientsControl.Designer.cs">
+      <DependentUpon>PatientsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Doctors\DoctorsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Doctors\DoctorsControl.Designer.cs">
+      <DependentUpon>DoctorsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Doctors\DoctorDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Appointments\AppointmentsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Appointments\AppointmentsControl.Designer.cs">
+      <DependentUpon>AppointmentsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Appointments\AppointmentDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Therapies\TherapiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Therapies\TherapiesControl.Designer.cs">
+      <DependentUpon>TherapiesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Therapies\TherapySessionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Prescriptions\PrescriptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Prescriptions\PrescriptionsControl.Designer.cs">
+      <DependentUpon>PrescriptionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Prescriptions\PrescriptionDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Patients\PrakritiQuestionnaireForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Billing\BillingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Billing\BillingControl.Designer.cs">
+      <DependentUpon>BillingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Billing\InvoiceDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\TherapySessionRepository.cs" />
+    <Compile Include="Data\PrescriptionRepository.cs" />
+    <Compile Include="Data\InvoiceRepository.cs" />
+    <Compile Include="Forms\Patients\PatientDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlaceholderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\PlaceholderControl.Designer.cs">
+      <DependentUpon>PlaceholderControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\bg_leaf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core">
+      <Version>1.0.118</Version>
+    </PackageReference>
+    <PackageReference Include="QuestPDF">
+      <Version>2023.12.6</Version>
+    </PackageReference>
+    <PackageReference Include="LiveCharts.WinForms">
+      <Version>0.9.7.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
