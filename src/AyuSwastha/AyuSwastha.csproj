@@ -64,7 +64,6 @@
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Therapy.cs" />
     <Compile Include="Models\TherapySession.cs" />
-    <Compile Include="Models\Prescription.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Data\Database.cs" />
     <Compile Include="Data\Seed.cs" />
@@ -126,15 +125,6 @@
     <Compile Include="Forms\Therapies\TherapySessionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Prescriptions\PrescriptionsControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Prescriptions\PrescriptionsControl.Designer.cs">
-      <DependentUpon>PrescriptionsControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Prescriptions\PrescriptionDetailForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\Patients\PrakritiQuestionnaireForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,7 +138,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Data\TherapySessionRepository.cs" />
-    <Compile Include="Data\PrescriptionRepository.cs" />
     <Compile Include="Data\InvoiceRepository.cs" />
     <Compile Include="Forms\Patients\PatientDetailForm.cs">
       <SubType>Form</SubType>

@@ -130,26 +130,6 @@ CREATE TABLE IF NOT EXISTS TherapySessions (
     FOREIGN KEY (PatientId) REFERENCES Patients(Id)
 );
 
-CREATE TABLE IF NOT EXISTS Prescriptions (
-    Id                  INTEGER PRIMARY KEY AUTOINCREMENT,
-    PatientId           INTEGER NOT NULL,
-    DoctorId            INTEGER NOT NULL,
-    IssuedOn            TEXT    NOT NULL,
-    GeneralInstructions TEXT,
-    FOREIGN KEY (PatientId) REFERENCES Patients(Id),
-    FOREIGN KEY (DoctorId)  REFERENCES Doctors(Id)
-);
-
-CREATE TABLE IF NOT EXISTS PrescriptionItems (
-    Id             INTEGER PRIMARY KEY AUTOINCREMENT,
-    PrescriptionId INTEGER NOT NULL,
-    HerbName       TEXT    NOT NULL,
-    Dosage         TEXT,
-    Duration       TEXT,
-    Instructions   TEXT,
-    FOREIGN KEY (PrescriptionId) REFERENCES Prescriptions(Id) ON DELETE CASCADE
-);
-
 CREATE TABLE IF NOT EXISTS Invoices (
     Id         INTEGER PRIMARY KEY AUTOINCREMENT,
     PatientId  INTEGER NOT NULL,

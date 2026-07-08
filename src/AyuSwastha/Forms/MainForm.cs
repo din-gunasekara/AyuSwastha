@@ -50,9 +50,6 @@ namespace AyuSwastha.Forms
                 case "therapy":
                     view = new TherapiesControl();
                     break;
-                case "prescriptions":
-                    view = new PrescriptionsControl();
-                    break;
                 case "billing":
                     view = new BillingControl();
                     break;

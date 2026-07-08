@@ -20,7 +20,6 @@ namespace AyuSwastha.Forms
         private Button btnPatients;
         private Button btnAppointments;
         private Button btnTherapy;
-        private Button btnPrescriptions;
         private Button btnBilling;
         private Button btnDoctors;
 
@@ -43,7 +42,6 @@ namespace AyuSwastha.Forms
             this.btnPatients = new Button();
             this.btnAppointments = new Button();
             this.btnTherapy = new Button();
-            this.btnPrescriptions = new Button();
             this.btnBilling = new Button();
             this.btnDoctors = new Button();
             this.SuspendLayout();
@@ -104,7 +102,6 @@ namespace AyuSwastha.Forms
             this.panelNav.Width = 200;
             this.panelNav.Controls.Add(this.btnDoctors);
             this.panelNav.Controls.Add(this.btnBilling);
-            this.panelNav.Controls.Add(this.btnPrescriptions);
             this.panelNav.Controls.Add(this.btnTherapy);
             this.panelNav.Controls.Add(this.btnAppointments);
             this.panelNav.Controls.Add(this.btnPatients);
@@ -124,9 +121,8 @@ namespace AyuSwastha.Forms
             ConfigureNavButton(this.btnPatients, "  Patients", 1, "patients");
             ConfigureNavButton(this.btnAppointments, "  Appointments", 2, "appointments");
             ConfigureNavButton(this.btnTherapy, "  Therapy Schedule", 3, "therapy");
-            ConfigureNavButton(this.btnPrescriptions, "  Prescriptions", 4, "prescriptions");
-            ConfigureNavButton(this.btnBilling, "  Billing", 5, "billing");
-            ConfigureNavButton(this.btnDoctors, "  Doctors", 6, "doctors");
+            ConfigureNavButton(this.btnBilling, "  Billing", 4, "billing");
+            ConfigureNavButton(this.btnDoctors, "  Doctors", 5, "doctors");
             //
             // MainForm
             //
